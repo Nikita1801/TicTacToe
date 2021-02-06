@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">КРЕСТ-И-НОЛИК</string>
+    <string name="player_one">Первый игрок</string>
+    <string name="_0">0</string>
+    <string name="player_two">Второй игрок</string>
+    <string name="restart_game">Перезапуск</string>
+    <string name="pl1wing">Выигрывает Первый Игрок!</string>
+    <string name="pl2wing">Выигрывает Второй Игрок!</string>
+    <string name="pl2winround">Победил Второй Игрок!</string>
+    <string name="pl1winround">Победил Первый Игрок!</string>
+    <string name="nowinround">Четсная Ничья</string>
+</resources>

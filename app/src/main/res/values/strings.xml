@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="player_one">Player One</string>
+    <string name="_0">0</string>
+    <string name="player_two">Player Two</string>
+    <string name="restart_game">Restart game</string>
+    <string name="pl1wing">Player One is winning!</string>
+    <string name="pl2wing">Player Two is winning!</string>
+    <string name="pl2winround">Player Two won!</string>
+    <string name="pl1winround">Player One won!</string>
+    <string name="nowinround">No winner</string>
+</resources>

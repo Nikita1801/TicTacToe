@@ -1,4 +1,4 @@
-package com.example.tictactoe;
+package com.nty.tictactoe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView player1Score, player2Score, playerStatus;
     private Button[] buttons   = new Button[9];
@@ -16,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private int player1ScoreCount, player2ScoreCount, rountCount;
     boolean activePlayer;
+    private AdView mAdView;
 
 
     int [] gameState= {2, 2,2,2,2,2,2,2,2};
@@ -34,6 +40,50 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         player2Score = findViewById(R.id.player2Score);
         playerStatus = findViewById(R.id.playerStatus);
         resetGame = findViewById(R.id.restart);
+
+
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+
+        mAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
+            }
+
+            @Override
+            public void onAdFailedToLoad(LoadAdError adError) {
+                // Code to be executed when an ad request fails.
+            }
+
+            @Override
+            public void onAdOpened() {
+                // Code to be executed when an ad opens an overlay that
+                // covers the screen.
+            }
+
+            @Override
+            public void onAdClicked() {
+                // Code to be executed when the user clicks on an ad.
+            }
+
+            @Override
+            public void onAdLeftApplication() {
+                // Code to be executed when the user has left the app.
+            }
+
+            @Override
+            public void onAdClosed() {
+                // Code to be executed when the user is about to return
+                // to the app after tapping on an ad.
+            }
+        });
+
+
+
 
         for (int i=0; i < buttons.length;  i++) {
             String buttonID = "btn_" + i;

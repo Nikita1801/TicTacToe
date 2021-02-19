@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">КРЕСТ-И-НОЛИК</string>
+    <string name="app_name">Tic Tac Toe</string>
     <string name="player_one">Первый игрок</string>
     <string name="_0">0</string>
     <string name="player_two">Второй игрок</string>
